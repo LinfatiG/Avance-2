@@ -5,8 +5,8 @@ import java.util.ArrayList;
 
 public class Pedido {
 
-    ArrayList<Comestibles> comidas;
-    ArrayList<Bebestibles> bebidas;
+    ArrayList<Comestible> comidas;
+    ArrayList<Bebestible> bebidas;
 
     Pedido() {
     }
@@ -14,7 +14,7 @@ public class Pedido {
     public void agregarComida() {
         Carta carta = new Carta();
         System.out.println("ingrese opcion a elegir para agregar al pedido");
-        carta.mostrarComestibles();
+     //   carta.mostrarComestibles();
         Validador val = new Validador();
         int opcn = val.validarNumero();
         addComida(opcn);
@@ -23,23 +23,23 @@ public class Pedido {
     public void addComida(int opcn) {
         switch (opcn) {
             case 1:
-                Comestibles hamburguesas = Comestibles.HAMBURGUESAS;
+                Comestible hamburguesas = Comestible.HAMBURGUESAS;
                 comidas.add(hamburguesas);
                 break;
             case 2:
-                Comestibles polloConPapas = Comestibles.POLLOCONPAPAS;
+                Comestible polloConPapas = Comestible.POLLOCONPAPAS;
                 comidas.add(polloConPapas);
                 break;
             case 3:
-                Comestibles carneALaOlla = Comestibles.CARNEALAOLLA;
+                Comestible carneALaOlla = Comestible.CARNEALAOLLA;
                 comidas.add(carneALaOlla);
                 break;
             case 4:
-                Comestibles pizzaNapolitana = Comestibles.PIZZANAPOLITANA;
+                Comestible pizzaNapolitana = Comestible.PIZZANAPOLITANA;
                 comidas.add(pizzaNapolitana);
                 break;
             case 5:
-                Comestibles pizzaVegetariana = Comestibles.PIZZAVEGETARIANA;
+                Comestible pizzaVegetariana = Comestible.PIZZAVEGETARIANA;
                 comidas.add(pizzaVegetariana);
                 break;
             default:
@@ -52,7 +52,7 @@ public class Pedido {
     public void agregarBebida() {
         Carta carta = new Carta();
         System.out.println("ingrese opcion a elegir para agregar al pedido");
-        carta.mostrarComestibles();
+     //   carta.mostrarComestibles();
         Validador val = new Validador();
         int opcn = val.validarNumero();
         addBebida(opcn);
@@ -61,19 +61,19 @@ public class Pedido {
     public void addBebida(int opcn) {
         switch (opcn) {
             case 1:
-                Bebestibles bebida = Bebestibles.BEBIDA;
+                Bebestible bebida = Bebestible.BEBIDA;
                 bebidas.add(bebida);
                 break;
             case 2:
-                Bebestibles nectar = Bebestibles.NECTAR;
+                Bebestible nectar = Bebestible.NECTAR;
                 bebidas.add(nectar);
                 break;
             case 3:
-                Bebestibles jugoNatural = Bebestibles.JUGONATURAL;
+                Bebestible jugoNatural = Bebestible.JUGONATURAL;
                 bebidas.add(jugoNatural);
                 break;
             case 4:
-                Bebestibles aguaMineral = Bebestibles.AGUAMINERAL;
+                Bebestible aguaMineral = Bebestible.AGUAMINERAL;
                 bebidas.add(aguaMineral);
                 break;
             default:
