@@ -1,20 +1,31 @@
 package datoss;
 
-public enum Comestibles {
+public enum Comestible {
 
-    HAMBURGUESAS(1500),
-    POLLOCONPAPAS(2000),
-    CARNEALAOLLA(3000),
-    PIZZANAPOLITANA(3000),
-    PIZZAVEGETARIANA(2700);
-    private int precio;
+    HAMBURGUESAS("Hamburguesa", 1500),
+    POLLOCONPAPAS("Pollo con papas", 2000),
+    CARNEALAOLLA("Carne a la olla", 3000),
+    PIZZANAPOLITANA("Pizza Napolitana", 3000),
+    PIZZAVEGETARIANA("Pizza vegetariana", 2700);
+    
+    private double precio;
+    private String comida;
 
-    Comestibles(int precio) {
+    private Comestible(String nombre, int precio) {
         this.precio = precio;
+        this.comida = nombre;
     }
 
-    public int getPrecio() {
-        return precio;
+    public String toString() {
+        return getNombre() + "; " + "precio=" + getPrecio();
+    }
+
+    public double getPrecio() {
+        return this.precio;
+    }
+
+    public String getNombre() {
+        return this.comida;
     }
 
 }
