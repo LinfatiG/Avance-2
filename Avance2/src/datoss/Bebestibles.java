@@ -1,18 +1,29 @@
 package datoss;
 
-public enum Bebestibles {
-    BEBIDA(1000),
-    NECTAR(1000),
-    JUGONATURAL(1500),
-    AGUAMINERAL(1000);
+public enum Bebestible {
 
-    private int precio;
+    BEBIDA("Bebida", 1000),
+    NECTAR("Nectar", 1000),
+    JUGONATURAL("Jugo natural", 1500),
+    AGUAMINERAL("Agua mineral", 1000);
 
-    Bebestibles(int precio) {
+    private double precio;
+    private String bebestible;
+
+    private Bebestible(String nombre, int precio) {
         this.precio = precio;
+        this.bebestible = nombre;
     }
 
-    public int getPrecio() {
-        return precio;
+    public String toString() {
+        return getNombre() + "; " + "precio=" + getPrecio();
+    }
+
+    public double getPrecio() {
+        return this.precio;
+    }
+
+    public String getNombre() {
+        return this.bebestible;
     }
 }
