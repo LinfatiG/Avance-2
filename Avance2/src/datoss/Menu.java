@@ -10,7 +10,7 @@ public class Menu {
         System.out.println("¿Qué desea hacer?");
         System.out.println();
         System.out.println("1.- Ver carta");
-        System.out.println("2.- hacer pedido ");
+        System.out.println("2.- Hacer pedido ");
         System.out.println("3.- Cerrar programa");
         Validador val = new Validador();
 
@@ -54,7 +54,7 @@ public class Menu {
         Carta ct = new Carta();
         switch (opcn) {
             case 1:
-                ct.mostrarComestibles();
+                ct.mostrarComestible();
                 menu();
                 break;
             case 2:
